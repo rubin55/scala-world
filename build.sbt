@@ -1,5 +1,4 @@
-scalaVersion := "2.13.1"
+scalaVersion := "3.1.2"
 name := "scala-world"
-organization := "ch.epfl.scala"
+organization := "org.rubin55"
 version := "1.0"
-libraryDependencies += "org.typelevel" %% "cats-core" % "2.0.0"
