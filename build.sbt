@@ -1,4 +1,4 @@
-scalaVersion := "3.1.2"
+scalaVersion := "3.2.1"
 name := "scala-world"
 organization := "org.rubin55"
-version := "1.0"
+version := "0.0.1"
