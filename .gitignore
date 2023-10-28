@@ -1,6 +1,23 @@
-**/target
-**/.bloop
+# Scala.
+**/*.class
+**/*.log
+
+# SBT.
 **/.bsp
-**/.idea
+
+# Metals.
 **/.metals
 **/metals.sbt
+**/.bloop
+
+# Maven.
+**/target
+
+# Idea.
+**/*.iml
+**/*.ipr
+**/*.iws
+**/.idea
+
+# Misc.
+**/.DS_Store
