@@ -16,10 +16,34 @@ class Rational(n: Int, d: Int):
   private def gcd(a: Int, b: Int): Int =
     if b == 0 then a else gcd(b, a % b)
 
-  @targetName("add")
+  @targetName("add-rational")
   def +(r: Rational): Rational =
     Rational(numerator * r.denominator + r.numerator * denominator, denominator * r.denominator)
 
-  @targetName("multiply")
+  @targetName("add-integer")
+  def +(i: Int): Rational =
+    Rational(numerator + i * denominator, denominator)
+
+  @targetName("minus-rational")
+  def -(r: Rational): Rational =
+    Rational(numerator * r.denominator - r.denominator * denominator, denominator * r.denominator)
+
+  @targetName("minus-integer")
+  def -(i: Int): Rational =
+    Rational(numerator -i * denominator, denominator)
+
+  @targetName("multiply-rational")
   def *(r: Rational): Rational =
     Rational(numerator * r.numerator, denominator * r.denominator)
+
+  @targetName("multiply-integer")
+  def *(i: Int): Rational =
+    Rational(numerator * i, denominator)
+
+  @targetName("divide-rational")
+  def /(r: Rational): Rational =
+    Rational(numerator * r.denominator, denominator * r.numerator)
+
+  @targetName("divide-integer")
+  def /(i: Int): Rational =
+    Rational(numerator, denominator * i)
