@@ -18,32 +18,40 @@ class Rational(n: Int, d: Int):
 
   @targetName("add-rational")
   def +(r: Rational): Rational =
-    Rational(numerator * r.denominator + r.numerator * denominator, denominator * r.denominator)
+    Rational(numerator * r.denominator + r.numerator * denominator,
+      denominator * r.denominator)
 
   @targetName("add-integer")
   def +(i: Int): Rational =
-    Rational(numerator + i * denominator, denominator)
+    Rational(numerator + i * denominator,
+      denominator)
 
   @targetName("minus-rational")
   def -(r: Rational): Rational =
-    Rational(numerator * r.denominator - r.denominator * denominator, denominator * r.denominator)
+    Rational(numerator * r.denominator - r.denominator * denominator,
+      denominator * r.denominator)
 
   @targetName("minus-integer")
   def -(i: Int): Rational =
-    Rational(numerator -i * denominator, denominator)
+    Rational(numerator -i * denominator,
+      denominator)
 
   @targetName("multiply-rational")
   def *(r: Rational): Rational =
-    Rational(numerator * r.numerator, denominator * r.denominator)
+    Rational(numerator * r.numerator,
+      denominator * r.denominator)
 
   @targetName("multiply-integer")
   def *(i: Int): Rational =
-    Rational(numerator * i, denominator)
+    Rational(numerator * i,
+      denominator)
 
   @targetName("divide-rational")
   def /(r: Rational): Rational =
-    Rational(numerator * r.denominator, denominator * r.numerator)
+    Rational(numerator * r.denominator,
+      denominator * r.numerator)
 
   @targetName("divide-integer")
   def /(i: Int): Rational =
-    Rational(numerator, denominator * i)
+    Rational(numerator,
+      denominator * i)
